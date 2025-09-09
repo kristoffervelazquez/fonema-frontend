@@ -25,11 +25,7 @@ const Dashboard = () => {
 
   if (error) {
     return <Alert severity="error">Error al cargar el dashboard: {error.message}</Alert>;
-  }
-
-  if (!transcripts || transcripts.length === 0) {
-    return <Typography variant="h5" textAlign="center" mt={5}>No hay datos para mostrar.</Typography>
-  }
+  }  
 
   return (
     <Container maxWidth="xl" sx={{ py: 4, position: 'relative' }}>
