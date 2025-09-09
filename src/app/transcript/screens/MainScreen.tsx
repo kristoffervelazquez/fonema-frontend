@@ -37,8 +37,6 @@ const Dashboard = () => {
         Dashboard de Análisis
       </Typography>
 
-
-      {/* Cards de estadísticas - Responsivos */}
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
@@ -49,8 +47,6 @@ const Dashboard = () => {
         <StatCard title="Llamadas Positivas" value={sentimentCounts.Positivo} color="success.main" />
         <StatCard title="Llamadas Negativas" value={sentimentCounts.Negativo} color="error.main" />
       </Box>
-
-      {/* Gráficos - Responsivos */}
       <Box sx={{
         display: 'grid',
         gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },

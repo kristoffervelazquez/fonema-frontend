@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Call Transcript Analyzer - Frontend 📊
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is the frontend application for the Call Transcript Analyzer, built with React, Vite, and Material-UI. It provides a user-friendly interface to interact with the backend, allowing users to submit transcripts and visualize the AI-generated analyses in an interactive dashboard.
 
-## Expanding the ESLint configuration
+---
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Interactive Dashboard**: Displays statistics like average sentiment and charts showing sentiment distribution and trends over time.
+- **Create New Analysis**: A user-friendly modal with drag-and-drop support for uploading JSON transcript files.
+- **History View**: An interactive and sortable DataGrid showing all past analyses.
+- **Detailed View**: A dedicated page for each analysis, showing the full summary, sentiment, action items, and the original transcript in a timeline format.
+- **Responsive Design**: The interface is fully responsive and works on both desktop and mobile devices.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Framework**: React
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **UI Library**: Material-UI (MUI) & MUI X (DataGrid, Charts)
+- **Data Fetching**: SWR
+- **Routing**: React Router
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+## ⚙️ Setup and Installation
+
+Follow these steps to get the frontend running locally.
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/kristoffervelazquez/fonema-frontend.git
+    ```
+
+2.  **Navigate to the frontend directory**
+    ```bash
+    cd fonema_frontend
+    ```
+
+3.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+4.  **Create the environment file**
+   Create the `.env` file and add your credentials.
+
+---
+## 🔑 Environment Variables
+
+The `.env` file is required to connect the frontend to the backend.
+
+```dotenv
+# .env
+
+# The base URL for the backend API.
+# This must match the host and port where your backend server is running.
+VITE_BACKEND_URL="http://localhost:3000/api"
 ```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ✅ Run the project
+1.  **Run development**
+    ```bash
+    npm run dev
+    ```
+The application will be available at http://localhost:3000 (or another port specified on .env file).
