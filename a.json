@@ -1,0 +1,29 @@
+{
+  "transcript": [
+    {
+      "ts": "00:00:07.200",
+      "speaker": "Cliente",
+      "text": "Estoy muy molesto. Mi servicio ha estado caído por más de una hora y estoy perdiendo ventas."
+    },
+    {
+      "ts": "00:00:12.900",
+      "speaker": "Agente",
+      "text": "Lamento mucho escuchar eso. Permíteme revisar el estado de nuestros servidores de inmediato."
+    },
+    {
+      "ts": "00:00:19.300",
+      "speaker": "Agente",
+      "text": "Veo que hay una incidencia en tu zona. Nuestro equipo técnico ya está trabajando en ello y debería estar resuelto en los próximos 30 minutos."
+    },
+    {
+      "ts": "00:00:25.800",
+      "speaker": "Cliente",
+      "text": "Esto es inaceptable. Necesito que se aplique un crédito a mi factura de este mes por el tiempo perdido."
+    },
+    {
+      "ts": "00:00:31.100",
+      "speaker": "Agente",
+      "text": "Entiendo completamente tu frustración. Voy a procesar un crédito del 10% en tu próxima factura ahora mismo como compensación."
+    }
+  ]
+}
